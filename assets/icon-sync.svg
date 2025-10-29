@@ -1,0 +1,8 @@
+<svg id="icon-sync" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M4 12a8 8 0 0 1 13.856-5.657"/>
+    <path d="M20 12a8 8 0 0 1-13.856 5.657"/>
+    <path d="M15 6h3V3"/>
+    <path d="M9 18H6v3"/>
+  </g>
+</svg>
