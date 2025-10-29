@@ -3,7 +3,7 @@
  * Reemplaza GS_SCRIPT_URL con la URL de implementación del Web App de Apps Script (deploy "Nueva Implementación" > Tipo Web App)
  * Ejemplo: https://script.google.com/macros/s/AKfycbx1234567890/exec
  */
-const GS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyuxXcry9QkMbz4Rqh5j10RS-wy35ztnXGSNmy7uLRnNzBzOtdS5DuyDYLBoD6M-vF1ZA/exec";
+const GS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwFYtBDSM5JpXXHg7lKcy-bxX3LGKesw4Ly1B9hBouzXOw0zrCEUvsPTNn047MGcCPmtA/exec";
 
 export async function gsGetAll() {
   const url = GS_SCRIPT_URL + "?type=all";
