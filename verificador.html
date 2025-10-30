@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Verificador CRM - INNVIDA</title>
+<style>
+body { font-family: Arial; background:#f7f7f7; text-align:center; padding:50px; }
+.card { background:white; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:20px; display:inline-block; }
+.url { font-weight:bold; color:#007bff; }
+.status { margin-top:20px; font-size:1.2em; }
+.ok { color:green; }
+.error { color:red; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>🔍 Verificador de Conexión CRM INNVIDA</h2>
+  <p>URL actual configurada:</p>
+  <p class="url">https://script.google.com/macros/s/AKfycbzAe6tkpNVP_TKFkJ_PdICbRUz1ezBdAxq0Px1VzJR0SJ_XhCW1Y_QVjNxYhFlChbL_jQ/exec</p>
+  <button onclick="checkConnection()">Verificar conexión</button>
+  <div id="result" class="status"></div>
+</div>
+
+<script>
+const url = "https://script.google.com/macros/s/AKfycbzAe6tkpNVP_TKFkJ_PdICbRUz1ezBdAxq0Px1VzJR0SJ_XhCW1Y_QVjNxYhFlChbL_jQ/exec?type=all";
+
+async function checkConnection() {
+  document.getElementById('result').innerHTML = '⏳ Probando conexión...';
+  try {
+    const response = await fetch(url, { method: 'GET' });
+    if (!response.ok) throw new Error('Respuesta no válida');
+    const data = await response.json();
+    document.getElementById('result').innerHTML = '✅ Conexión exitosa. CORS habilitado.';
+    document.getElementById('result').className = 'status ok';
+  } catch (error) {
+    document.getElementById('result').innerHTML = '❌ Error: ' + error.message + '<br>Verifica que el Apps Script tenga CORS activo.';
+    document.getElementById('result').className = 'status error';
+  }
+}
+</script>
+</body>
+</html>
