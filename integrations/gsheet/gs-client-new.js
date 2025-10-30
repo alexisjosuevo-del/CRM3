@@ -1,9 +1,9 @@
 /**
  * INNVIDA CRM - Google Sheets Sync Client (v16)
  * Reemplaza GS_SCRIPT_URL con la URL de implementación del Web App de Apps Script (deploy "Nueva Implementación" > Tipo Web App)
- * Ejemplo: https://script.google.com/macros/s/AKfycbx1234567890/exec
+ * Ejemplo: https://script.google.com/macros/s/AKfycbxk2iAkbA-4t30tKxkCj34WbxAnqfFEFsZjwGJOEOfs75NsDse2JJuR0gxlObKTuCkCfQ/exec
  */
-const GS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzAe6tkpNVP_TKFkJ_PdICbRUz1ezBdAxq0Px1VzJR0SJ_XhCW1Y_QVjNxYhFlChbL_jQ/exec";
+const GS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxk2iAkbA-4t30tKxkCj34WbxAnqfFEFsZjwGJOEOfs75NsDse2JJuR0gxlObKTuCkCfQ/exec";
 
 export async function gsGetAll() {
   const url = GS_SCRIPT_URL + "?type=all";
